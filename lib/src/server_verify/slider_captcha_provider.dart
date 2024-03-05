@@ -48,8 +48,8 @@ class SliderCaptchaClientProvider {
   Future<bool> init(BuildContext context) async {
     puzzleSize = await _getSize(puzzleUnit8List);
     pieceSize = await _getSize(pieceUnit8List);
-    // mobile screen width is below 800
-    if (MediaQuery.of(context).size.width < 800) {
+    // mobile screen width is below 400
+    if (MediaQuery.of(context).size.width < 400) {
       ratio = _getRatio(context);
     } else {
       ratio = 1.0;
